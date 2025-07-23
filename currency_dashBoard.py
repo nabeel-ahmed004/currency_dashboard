@@ -8,7 +8,6 @@ import plotly.express as px
 
 # --- Config ---
 SHEET_NAME = "Currency_Exchange_Log"
-CREDENTIALS_FILE = "credentials.json"
 API_KEY = "ab63afcaf73a491633b5391d"  # Replace with your actual key if needed
 
 # --- Page Setup ---
@@ -75,7 +74,9 @@ if available_currencies:
     @st.cache_resource
     def connect_gsheet():
         scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-        creds = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, scope)
+        import json
+        creds_dict = st.secrets["gsheets"]
+        creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
         client = gspread.authorize(creds)
         sheet = client.open(SHEET_NAME).sheet1
         return sheet
