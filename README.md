@@ -2,14 +2,14 @@
 
 This is a real-time currency exchange dashboard built using Streamlit and Python. It fetches live currency exchange rates using ExchangeRate API, logs them to Google Sheets, and visualizes currency trends using Plotly.
 
-## 🔧 Tools & Technologies
+## Tools & Technologies
 - **Python**
 - **Streamlit**
 - **ExchangeRate API**
 - **Google Sheets API** via `gspread`
 - **Plotly** for trend visualization
 
-## 📦 Setup Instructions
+## Setup Instructions
 
 1. Clone this project or download the `currency_dashboard.py` file.
 2. Install dependencies:
@@ -22,7 +22,7 @@ This is a real-time currency exchange dashboard built using Streamlit and Python
    streamlit run currency_dashboard.py
    ```
 
-## 📈 Features
+## Features
 
 - Select a base currency dynamically.
 - Choose 3–15 target currencies to compare.
@@ -30,5 +30,5 @@ This is a real-time currency exchange dashboard built using Streamlit and Python
 - Log each exchange check to a Google Sheet.
 - Display trend charts for historical exchange rates.
 
-## 🧠 Author
+## Author
 This project was built during an internship with **Redline Intelligence**.
